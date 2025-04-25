@@ -7,9 +7,7 @@ from pandas import DataFrame
 from sentinel_tiles import sentinel_tiles
 from solar_apparent_time import UTC_to_solar
 
-from PTJPL import process_PTJPL
-from PTJPL.Topt import load_Topt
-from PTJPL.fAPARmax import load_fAPARmax
+from PTJPL import PTJPL, load_Topt, load_fAPARmax
 
 from SEBAL import calculate_soil_heat_flux as SEBAL_G
 
@@ -132,7 +130,7 @@ def process_PTJPL_table(input_df: DataFrame) -> DataFrame:
             albedo=albedo
         ).astype(np.float64)
     
-    results = process_PTJPL(
+    results = PTJPL(
         # ST_C = ST_C,
         # emissivity=emissivity,
         NDVI=NDVI,

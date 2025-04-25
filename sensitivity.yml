@@ -29,10 +29,11 @@ dependencies:
   - pyresample
   - pysolar
   - pystac-client
-  - python=3.11
+  - python=3.10
   - python-dateutil
   - rasterio>1.0.0
   - requests
+  - seaborn
   - scikit-image
   - setuptools<58
   - shapely
@@ -44,21 +45,25 @@ dependencies:
   - xtensor
   - xtensor-python
   - pip:
-      - breathing-earth-system-simulator
+      - BESS-JPL
       - colored_logging
       - FLiESANN>=1.1.0
       - gedi-canopy-height
-      - geos5fp
+      - GEOS5FP
       - harmonized-landsat-sentinel
       - koppengeiger
       - MCD12C1-2019-v006
       - mgrs
       - modisci
+      - PM-JPL
+      - PTJPL
+      - PTJPLSM
       - pycksum
       - rasters
       - sentinel-tiles
       - sentinelsat
       - soil-capacity-wilting
+      - STIC-JPL
       - sun-angles
       - tensorflow==2.15.*
       - typing-extensions>=4.12.2
